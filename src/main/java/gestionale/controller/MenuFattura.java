@@ -54,7 +54,7 @@ public class MenuFattura {
 	private boolean filtro = false;
 	private int mouseSelezione = 0;
 	private Cliente cliente;
-	
+
 	@Autowired
 	FiltroFattura filtroFattura;
 	@Autowired
@@ -65,7 +65,8 @@ public class MenuFattura {
 	MenuFattura menuFattura;
 	@Autowired
 	ClienteService clienteService;
-	
+	@Autowired
+	MessaggioConferma messaggioConferma;
 
 	public MenuFattura() throws SQLException {
 
@@ -107,30 +108,13 @@ public class MenuFattura {
 
 		btnNewButtonModifica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				QueryFattura modifica = new QueryFattura();
-//				InserimentoFattura modificaFattura = new InserimentoFattura();
-//				modificaFattura.modifica = true;
-//				modificaFattura.numeroFattura = mouseSelezione;
-//				modificaFattura.initialize();
-//				if (modificaFattura.erroreCognome == true) {
-//					MessaggioConferma errore = new MessaggioConferma();
-//					errore.lblNewLabel.setText("ERRORE MANCA IL COGNOME ");
-//					errore.lblNewLabel.setBounds(15, 35, 200, 50);
-//					errore.frmMessaggioConferma.setBounds(200, 200, 250, 180);
-//				}
-//
-//				int l = dtmAnagrafica.getRowCount() - 1;
-//				for (int i = 0; i <= l; i++) {
-//					dtmAnagrafica.removeRow(0);
-//				}
-//
-//				try {
-//					rSet = modifica.selezioneFattura();
-//				} catch (SQLException e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				}
-//				dtmDefaultTableModel(rSet);
+				
+				inserimentoFattura.setCliente(cliente);
+				inserimentoFattura.setFattura(fattura);
+				inserimentoFattura.setModifica(true);
+				inserimentoFattura.initialize();
+				
+
 			}
 		});
 
@@ -144,6 +128,8 @@ public class MenuFattura {
 				fattura.setTotaleFattura(fattura.getTotaleFattura() * -1);
 				fatturaService.insertFattura(fattura);
 				frmMenuFattura.dispose();
+				messaggioConferma.setLblNewLabel(new JLabel ("Creata Nota di credito a storno !"));
+				messaggioConferma.initialize();
 				menuFattura.initialize();
 			}
 		});
@@ -153,7 +139,7 @@ public class MenuFattura {
 		btnNewButtonFiltra.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-//				filtroFattura.initialize();		
+			filtroFattura.initialize();		
 
 			}
 		});

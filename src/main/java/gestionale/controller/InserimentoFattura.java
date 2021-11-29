@@ -18,7 +18,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import gestionale.model.Cliente;
 import gestionale.model.Fattura;
 import gestionale.service.FatturaService;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
 @SpringBootApplication
 public class InserimentoFattura {
 
@@ -209,10 +214,10 @@ public class InserimentoFattura {
 			public void actionPerformed(ActionEvent e) {
 
 				fattura.setCliente(cliente);
-				fattura.setBollo(Double.parseDouble( bollo_text.getText()));
+				fattura.setBollo(Double.parseDouble(bollo_text.getText()));
 				fattura.setDataFattura(dataFattura.getText().toUpperCase());
-				fattura.setEmap(Double.parseDouble( empap.getText()));
-				fattura.setImponibile(Double.parseDouble( imponibile_text.getText()));
+				fattura.setEmap(Double.parseDouble(empap.getText()));
+				fattura.setImponibile(Double.parseDouble(imponibile_text.getText()));
 				fattura.setMetodoPagamento(metodoPagamento_text.getText().toUpperCase());
 				fattura.setTotaleFattura(Double.parseDouble(totaleFattura_text.getText()));
 				fattura.setTrattamento(trattamento.getText().toUpperCase());
@@ -240,37 +245,23 @@ public class InserimentoFattura {
 		lblMetodoPagamento.setBounds(31, 269, 102, 14);
 		frmInserimentoFattura.getContentPane().add(lblMetodoPagamento);
 
-//		if (modifica == true) {
-//			QueryFattura modifica = new QueryFattura();
-//
-//			try {
-//				rSet = modifica.selezioneidFattura(numeroFattura);
-//
-//				while (rSet.next()) {
-//					nome_textfield.setText(rSet.getString(4));
-//					cognome_textField.setText(rSet.getString(3));
-//					dataFattura.setText(rSet.getString(2));
-//					trattamento.setText(rSet.getString(11));
-//					trattamento2.setText(rSet.getString(12));
-//					trattamento3.setText(rSet.getString(13));
-//					imponibile_text.setText(rSet.getString(14));
-//					empap.setText(rSet.getString(15));
-//					bollo_text.setText(rSet.getString(16));
-//					totaleFattura_text.setText(rSet.getString(17));
-//					metodoPagamento_text.setText(rSet.getString(18));
-//
-//				}
-//				nome_textfield.getText();
-//
-//			} catch (SQLException e1) {
-//				e1.printStackTrace();
-//			}
-//		}
 		if (modifica == true) {
-			
+			nome_textfield.setText(fattura.getCliente().getNome());
+			cognome_textField.setText(fattura.getCliente().getCognome());
+			dataFattura.setText(fattura.getDataFattura());
+			trattamento.setText(fattura.getTrattamento());
+			trattamento2.setText(fattura.getTrattamento());
+			trattamento3.setText(fattura.getTrattamento3());
+			imponibile_text.setText(String.valueOf(fattura.getImponibile()));
+			empap.setText(String.valueOf(fattura.getEmap()));
+			bollo_text.setText(String.valueOf(fattura.getBollo()));
+			totaleFattura_text.setText(String.valueOf(fattura.getTotaleFattura()));
+			metodoPagamento_text.setText(fattura.getMetodoPagamento());
+			modifica = false;
 		}
 		frmInserimentoFattura.setModal(false);
 		frmInserimentoFattura.setVisible(true);
+
 	}
 
 	static public double arrotonda(double numero, int nCifreDecimali) {
