@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final utlizzo versione della libreria JasperReports6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6743c145-518c-4e0a-9443-bb496ff7ec97">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Nuovo Data Adapter (2)"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM fattura,
+	cliente]]>
+	</queryString>
+	<field name="numero_fattura" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="numero_fattura"/>
+		<property name="com.jaspersoft.studio.field.label" value="numero_fattura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="bollo" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="bollo"/>
+		<property name="com.jaspersoft.studio.field.label" value="bollo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="data_fattura" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="data_fattura"/>
+		<property name="com.jaspersoft.studio.field.label" value="data_fattura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="emap" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="emap"/>
+		<property name="com.jaspersoft.studio.field.label" value="emap"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="imponibile" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="imponibile"/>
+		<property name="com.jaspersoft.studio.field.label" value="imponibile"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="metodo_pagamento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="metodo_pagamento"/>
+		<property name="com.jaspersoft.studio.field.label" value="metodo_pagamento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="totale_fattura" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="totale_fattura"/>
+		<property name="com.jaspersoft.studio.field.label" value="totale_fattura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="trattamento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trattamento"/>
+		<property name="com.jaspersoft.studio.field.label" value="trattamento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="trattamento2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trattamento2"/>
+		<property name="com.jaspersoft.studio.field.label" value="trattamento2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="trattamento3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="trattamento3"/>
+		<property name="com.jaspersoft.studio.field.label" value="trattamento3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="cliente_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cliente_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="cliente_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fattura"/>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="capoluogo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="capoluogo"/>
+		<property name="com.jaspersoft.studio.field.label" value="capoluogo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="citta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="citta"/>
+		<property name="com.jaspersoft.studio.field.label" value="citta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="codice_fiscale" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="codice_fiscale"/>
+		<property name="com.jaspersoft.studio.field.label" value="codice_fiscale"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="codice_postale" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="codice_postale"/>
+		<property name="com.jaspersoft.studio.field.label" value="codice_postale"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="cognome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cognome"/>
+		<property name="com.jaspersoft.studio.field.label" value="cognome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="numero_civico" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="numero_civico"/>
+		<property name="com.jaspersoft.studio.field.label" value="numero_civico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="via" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="via"/>
+		<property name="com.jaspersoft.studio.field.label" value="via"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="58" y="20" width="100" height="30" uuid="c2bde37e-349d-48df-892d-3f976f621b9c"/>
+				<textFieldExpression><![CDATA[$F{numero_fattura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="21" width="100" height="30" uuid="503a804a-7732-497f-ad0f-e58d7f5c1f43"/>
+				<textFieldExpression><![CDATA[$F{cognome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
